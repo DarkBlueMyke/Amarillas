@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo sabiaa ❤️</title>
+    <link rel="stylesheet" href="./yes.css">
+    <link rel="icon" href="https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-corazon-como-icono.png">
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container">
+        <h1>LO sabia!, soy un papusho, inteligente, divertido, buena onda, etc... xD</h1>
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/ca/18/5f/ca185fc68864f7b70303c29d5681aa9e.gif" alt="gif">
+        </div>
+    </div>
+    <!-- autoria -->
+    <div class="autoria">
+        <p>Hecho por <a href="#">Amarillas</a></p>
+    </div>
+    <script>
+        // Crear corazones cayendo
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        // Crear corazones cada 300ms
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
